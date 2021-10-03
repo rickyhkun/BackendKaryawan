@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "e81c4693-cec7-40e1-bc3d-4d789365bb81",
+		"name": "Karyawan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Karyawan",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"kode\": \"K-003\",\r\n        \"nama\": \"Ricky\",\r\n        \"tglMasuk\": \"2021-09-02\",\r\n        \"hp\": \"089333444555\",\r\n        \"limitRembers\": 2000000\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/karyawan/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"karyawan",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Filter Karyawan",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/karyawan/filter?keyword=kris&start=2021-09-01&end=2021-09-01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"karyawan",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "kris"
+						},
+						{
+							"key": "start",
+							"value": "2021-09-01"
+						},
+						{
+							"key": "end",
+							"value": "2021-09-01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Karyawan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"kode\": \"K-003\",\r\n        \"nama\": \"Ricky\",\r\n        \"tglMasuk\": \"2021-09-02\",\r\n        \"hp\": \"089333444555\",\r\n        \"limitRembers\": 2000000\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/karyawan/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"karyawan",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Karyawan",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/karyawan/K-003",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"karyawan",
+						"K-003"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Karyawan",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/karyawan/K-003",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"karyawan",
+						"K-003"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
