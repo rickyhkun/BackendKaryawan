@@ -30,17 +30,6 @@ public class KaryawanServiceImpl implements KaryawanService{
         return kry;
     }
 
-    public karyawan findLastKode() {
-        karyawan kry;
-        try{
-            kry = KaryawanRepository.findLastKode();
-        }catch (EmptyResultDataAccessException e){
-            System.out.println(e);
-            kry = null;
-        }
-        return kry;
-    }
-
     public List<karyawan> searchKaryawan(String keyword, String startDate, String endDate) {
         List<karyawan> kry = KaryawanRepository.searchKaryawan(keyword, startDate, endDate);
         return kry;
